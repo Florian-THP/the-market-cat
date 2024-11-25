@@ -4,11 +4,12 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  has_many :articles                     # Articles vendus par le User.
-  has_one :cart                          # Chaque User a un Panier.
-  has_many :cart_items, through: :cart   # Les items dans le panier via le Cart.
-  has_many :orders                       # Les commandes passées par le User.
-  has_many :order_items, through: :orders # Les items des commandes via les Orders.
-  has_many :purchased_articles, through: :order_items, source: :article # Articles achetés.
+ 
+  has_one :cart                           # Chaque utilisateur a un seul panier actif
+  has_many :cart_items, through: :cart    # Accès aux items du panier via le panier
+  has_many :articles, through: :cart_items, source: :article  # Accès direct aux articles dans le panier
+  has_many :orders                        # Un utilisateur peut avoir plusieurs commandes
+  has_many :order_items, through: :orders # Accès aux items des commandes via les commandes
+  has_many :purchased_articles, through: :order_items, source: :article # Accès direct aux articles achetés via les items des commandes
 
 end
