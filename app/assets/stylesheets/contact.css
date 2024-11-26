@@ -1,0 +1,45 @@
+
+h2 {
+  font-size: 70px;
+  letter-spacing: -8px;
+  color: #8B4421;
+  font-weight: 450;
+  font-family: "Space Grotesk", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 0;
+}
+
+.container-contact {
+  height: 500px;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+}
+
+.info-contact {
+  width: 30%;
+  margin-left: 100px;
+}
+
+.text-info-contact {
+  display: flex;
+  align-items: center;
+  width: 250px;
+}
+
+.contact-icon {
+  width: 25px;
+  margin-right: 10px;
+
+}
+
+.map-image {
+  width: 85%;
+  height: 85%;
+}
