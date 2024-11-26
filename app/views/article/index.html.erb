@@ -1,5 +1,10 @@
-
+<%= render 'layouts/navbar' %>
+<% if current_user%>
+<%= current_user.email%>
+<%end%>
 Page Acceuil
+
+
 
 <% @articles.each do |article| %>
     
