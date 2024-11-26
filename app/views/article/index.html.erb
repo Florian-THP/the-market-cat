@@ -1,10 +1,32 @@
+<div class = "jumbotron">
 
-Page Acceuil
-
-<% @articles.each do |article| %>
+    <div class = "text-content">
+        <h1>The Market Cat</h1>
+        <h3>"Des chats qui ne griffent pas..."</h3>
+    </div>
     
-    <%= article.name %>
-    <%= article.price %>
-<% end %>
+    <div class="image-container">
+        <img src="./images/imageJumbo.jpg" alt="Chat">
+    </div>
+</div>
 
 
+
+
+
+<div class="articles-container">
+  <h2>Articles</h2>
+  <div class="grid">
+    <% @articles.each do |article| %>
+      <div class="article">
+        <img src="./images/imageJumbo.jpg" alt=" img_article">
+        <%= article.name %>
+        <p><%= article.price %></p>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+
+
+<%= paginate @articles %>
