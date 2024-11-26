@@ -112,3 +112,4 @@ end
 puts "5 active carts created!"
 
 puts "Seed successfully completed!"
+
