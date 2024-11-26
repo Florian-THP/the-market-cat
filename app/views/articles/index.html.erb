@@ -1,5 +1,5 @@
 <div class = "jumbotron">
-
+  <%= render 'layouts/navbar' %>
     <div class = "container_jumbo">
         <div class = "text-content">
             <h1>The Market Cat</h1>
@@ -11,10 +11,6 @@
     </div>
 </div>
 
-
-
-
-
 <div class="articles-container">
   <h2>Articles</h2>
   <div class="grid">
@@ -22,9 +18,11 @@
       <div class="article">
         <%= image_tag("imageJumbo.png", alt: "Cat", class: "img_jumbo") %>
         <div class="border_article">
-
-            <p><%= article.name %><br>
-            <strong><%= article.price %></strong></p>
+        
+            <p><%= article.name %> <br>
+            <strong><%= article.price %></strong>
+            <%= link_to "Voir", article_path(article) %>
+            </p>
         </div>
     </div>
     <% end %>
