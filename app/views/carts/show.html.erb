@@ -1,13 +1,16 @@
 <%= render 'layouts/navbar' %>
 
+
+<div class="container-title-panier">
+<%= image_tag 'panier.png', alt: 'Panier', class: 'panierImgTitle' %>
 <h2 class="panierTitle">
-  <%= image_tag 'panier.png', alt: 'Panier', class: 'panierImgTitle' %>
   Mon Panier
 </h2>
+</div>
 
 <div class="articlepanier">
   <% if @cart_items.any? %>
-    <div class="article">
+    <div class="article-cart">
       <% @cart_items.each do |cart_item| %>
         <div class="imgTilteArticle">
           <%= image_tag 'chattest.png', alt: 'Panier', class: 'imgArticlePanier' %>
