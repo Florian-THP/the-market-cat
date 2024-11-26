@@ -1,0 +1,23 @@
+
+<div class="grid" id="articles-list">
+
+    <% @articles.each do |article| %>
+        <div class="article_img">
+        <%= link_to article_path(article) do %>
+        <%= image_tag("imageJumbo.png", alt: "Cat", class: "img_article") %>
+    <div class="border_article">
+        <p class="article_name"><%= article.name %> <br>
+        <strong><%= number_to_currency(article.price, unit: "€ ") %></strong>
+            </p>
+        </div>
+    <% end %>
+</div>
+<% end %>
+</div>
+
+
+<div id="pagination">
+<%= paginate articles, remote: true %>
+</div>
+
+</div>
