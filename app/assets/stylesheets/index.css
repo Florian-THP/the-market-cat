@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+
+.jumbotron {
+    background-color: #FAEED8;
+    border-radius: 20px; 
+    padding-bottom: 50px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombre douce */
+  }
+
+  .container_jumbo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 95%;
+    margin-left: auto;
+
+  }
+
+.img_jumbo {
+    max-width: 75%;
+    width: 100%;
+    height: 100%;
+    margin-left: 100px;
+
+}
+
+
+  .jumbotron img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombre douce */
+  }
+
+  h1 {
+    font-size: 100px;
+    letter-spacing: -10px;
+    color: #8B4421;
+    font-weight: 550;
+    font-family: "Space Grotesk", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    margin-bottom: 0rem;
+    
+}
+
+h3 {
+    font-size: 40px;
+    letter-spacing: -3px;
+    color: #E0AB3F;
+    margin-top: -1rem;
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.card {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+  .articles-container h2 {
+    background-color: #fff;
+    padding: 2rem;
+    color: #8B4421;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 3rem; 
+  }
+
+
+  .border_article {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    overflow: hidden;
+    text-align: left;
+    border: 1px solid #ddd;
+  }
+
+  .article img {
+    width: 100%;
+    height: auto;
+    border-radius: px;
+    margin-bottom: 1rem;
+  }
