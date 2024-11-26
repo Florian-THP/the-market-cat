@@ -1,27 +1,41 @@
+<div class="body-contact">
+
 <%= render 'layouts/navbar' %>
 
 <div class="container-contact">
+
   <div class="info-contact">
+
     <h2>Contact</h2>
+
     <div class="text-info-contact">
       <%= image_tag("email-icon.png", alt: "mail", class: "contact-icon") %>
       <p>Paul.nil@badoo.fr</p>
     </div>
+
     <div class="text-info-contact">
       <%= image_tag("user-icon.png", alt: "mail", class: "contact-icon") %>
       <p>The market cat organization</p>
     </div>
+
     <div class="text-info-contact">
     <%= image_tag("map-icon.png", alt: "mail", class: "contact-icon") %>
     <p>20 rue du Generale Alexe<br>10000 Namibie</p>
+    </div>
+
+    <div class="text-info-contact">
+      <%= image_tag("phone-icon.png", alt: "mail", class: "contact-icon") %>
+      <p>06.06.06.06.06</p>
+    </div>
+
   </div>
-  <div class="text-info-contact">
-    <%= image_tag("phone-icon.png", alt: "mail", class: "contact-icon") %>
-    <p>06.06.06.06.06</p>
-  </div>
-</div>
   
   <div class="image-contact">
     <%= image_tag("map-screenshot.png", alt: "map", class: "map-image") %>
   </div>
+
+</div>
+
+<%= render 'layouts/footer' %>
+
 </div>
