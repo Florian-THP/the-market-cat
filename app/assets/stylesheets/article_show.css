@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+
+
+.article-show-container {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+  
+    .article-image img {
+      max-width: 426px;
+      max-height: 518px;
+      margin-top: 215px;
+      margin-left: 108px;
+      border: 5px solid #ffffff;
+      border-radius: 10px;
+    }
+  
+    .article-details {
+
+        .article-name-show{
+            font-family: sans-serif, Roboto;
+            letter-spacing: -5%;
+            font-size: 40px ;
+            max-width: 301px;
+        }
+
+        .article-description{
+            font-family: sans-serif, Roboto;
+            letter-spacing: -5%;
+            font-size: 22px ;
+        }
+
+        .article-price{
+            font-family: sans-serif, Roboto;
+            letter-spacing: -5%;
+            font-size: 22px ;
+        }
+      
+    }
+  }
+  
