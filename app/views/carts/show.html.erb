@@ -1,0 +1,53 @@
+<%= render 'layouts/navbar' %>
+
+<h2 class="panierTitle">
+  <%= image_tag 'panier.png', alt: 'Panier', class: 'panierImgTitle' %>
+  Mon Panier
+</h2>
+
+<div class="articlepanier">
+  <% if @cart_items.any? %>
+    <div class="article">
+      <% @cart_items.each do |cart_item| %>
+        <div class="imgTilteArticle">
+          <%= image_tag 'chattest.png', alt: 'Panier', class: 'imgArticlePanier' %>
+          <p class="nameArticle"><%= cart_item.article.name %></p>
+        </div>
+
+        <div class="containerInfo">
+          <div class="infoArticlePanier">
+            <p>Quantité : <%= cart_item.quantity %></p>
+            <p class="priceArticle"><%= cart_item.article.price %>€</p>
+          </div>
+
+          <%= button_to remove_article_from_cart_cart_path(article_id: cart_item.article.id), method: :delete, class: "deleteBtn", style: "cursor: pointer;" do %>
+            <%= image_tag("corbeille.png", alt: "Supprimer", class: "delete-icon") %>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+
+    <div class="trait"></div>
+
+    <div class="containerTotal">
+      <p class="textPanier">Total:</p>
+      <div class="total">
+        <p>Quantité : <%= @cart_items.sum { |item| item.quantity } %></p>
+        <p class="priceArticle"><%= @cart_items.sum { |item| item.quantity * item.article.price } %> €</p>
+      </div>
+    </div>
+
+    <div class="trait"></div>
+
+    <div class="detail">
+      <p class="textPanier">Livraison:</p>
+      <p class="emailUser"><%= current_user.email %></p>
+    </div>
+
+    <button class="payoutBtn">Payer</button>
+     <%= button_to 'Vider le panier', clear_cart_cart_path, method: :delete, class: "delete-panier", style: "cursor: pointer;" %>
+
+  </div>
+  <% else %>
+    <p>Votre panier est vide.</p>
+  <% end %>
