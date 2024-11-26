@@ -1,0 +1,182 @@
+/* CSS global */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #ffffff;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Gère les marges globales */
+  }
+
+/* Container global de la page */
+.login-container {
+  display: flex;
+  height: 100vh; /* Hauteur pleine page */
+}
+
+  .left-section {
+    flex: 0.6; /* 60% de la largeur */
+    background-color: #f9f7eb; /* Couleur de fond (à adapter à ta maquette) */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0; /* Supprime toutes les marges */
+    padding: 0; /* Supprime tout espace intérieur */
+    overflow: hidden; /* Empêche tout débordement */
+  }
+
+.left-section .large-image {
+    max-width: 100%; /* L'image s'ajustera à la largeur de la section */
+    max-height: 100%; /* L'image s'ajustera à la hauteur de la section */
+    object-fit: contain; /* Garde l'image entière avec ses proportions, Évite le tronquage */
+    margin: 0; /* Supprime les marges */
+    padding: 0; /* Supprime les espacements */
+    display: block; /* Assure que l'image est un élément de bloc */
+  }
+  
+
+
+
+
+
+
+/* Section droite : formulaire */
+.right-section {
+  flex: 0.4; /* Prend 40% de la largeur */
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; /* Centre le contenu horizontalement */
+  background-color: #ffffff;
+}
+
+/* Navbar */
+.login-navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+
+.login-navbar .login-nav-home  {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-size: 1rem;
+  font-family: 'Space Grotesk', sans-serif; /* Police Space Grotesk */
+  color: #5c5c5c;
+}
+
+.login-navbar .login-nav-home i {
+  margin-right: 0.5rem;
+}
+
+  .login-navbar .login-nav-logo {
+    height: 50px; /* Taille du logo */
+    max-width: 100px; /* Limite la largeur */
+    object-fit: contain; /* Préserve les proportions du logo */
+    display: block; /* Assure un bon comportement */
+  }
+
+/* Titre */
+h2 {
+    font-size: 70px;
+    letter-spacing: -6px;
+    color: #8B4421;
+    font-weight: 450;
+    font-family: "Space Grotesk", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Formulaire */
+.form-group {
+  margin-bottom: 1.5rem;
+  width: 100%;
+  max-width: 500px; /* Largeur maximale des champs */
+}
+
+.form-label {
+  font-weight: bold;
+  color: #333333;
+}
+
+.form-input {
+  width: 100%;
+  padding: 0.8rem;
+  margin-top: 0.5rem;
+  border: 1px solid #cccccc;
+  border-radius: 30px; /* Bord arrondi à 30px */
+  font-size: 1rem;
+}
+
+.form-input::placeholder {
+  color: #aaaaaa;
+}
+
+.remember-me {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.9rem;
+}
+
+.remember-checkbox {
+  margin-right: 0.5rem;
+}
+
+/* Bouton de connexion */
+.btn-login {
+  display: block;
+  width: 250px; /* Largeur spécifique au bouton */
+  height: 50px; /* Hauteur spécifique au bouton */
+  background-color: #8B4421; /* Couleur spécifique */
+  border-radius: 15px; /* Arrondi spécifique */
+  border: none;
+  color: #FFFFFF;
+  font-size: 20px;
+  letter-spacing: -5%;
+  cursor: pointer;
+  margin: 0 auto; /* Centre le bouton horizontalement */
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.btn-login:active {
+  transform: scale(0.97); /* Effet d'écrasement au clic */
+}
+
+.btn-login:hover {
+  background-color: #7f381e; /* Teinte légèrement plus foncée au survol */
+}
+
+/* Lien "Mot de passe oublié" */
+.link-forgot-password {
+  text-decoration: none; /* Supprime le soulignement */
+  color: #333333; /* Couleur neutre */
+  font-size: 0.9rem;
+  margin-left: 0.5rem;
+}
+
+/* Lien vers l'inscription */
+.signup-link {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 1rem;
+}
+
+.no-account-text {
+  color: #333333;
+}
+
+.link-signup {
+  color: #a64b2a;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.link-signup:hover {
+  text-decoration: underline;
+}
