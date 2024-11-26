@@ -12,28 +12,25 @@
 </div>
 
 
-
-
-
 <div class="articles-container">
-  <h2>Articles</h2>
+  <h2>Articles :</h2>
   <div class="grid">
     <% @articles.each do |article| %>
-      <div class="article">
-        <%= image_tag("imageJumbo.png", alt: "Cat", class: "img_jumbo") %>
+      <div class="article_img">
+      <%= link_to article_path(article) do %>
+        <%= image_tag("imageJumbo.png", alt: "Cat", class: "img_article") %>
         <div class="border_article">
-        
-            <p><%= article.name %> <br>
-            <strong><%= article.price %></strong>
-            <%= link_to "Voir", article_path(article) %>
+            <p class="article_name"><%= article.name %> <br>
+            <strong><%= number_to_currency(article.price, unit: "€ ")  %></strong>
             </p>
         </div>
+        <% end %>
     </div>
     <% end %>
   </div>
 </div>
 
 
-
+<div class = "pagination">
 <%= paginate @articles %>
->>>>>>> dev
+</div>
