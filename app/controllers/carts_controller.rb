@@ -2,19 +2,20 @@ class CartsController < ApplicationController
   before_action :authenticate_user!
 
   def show
-    @cart = current_user.cart
+    @cart = current_user.cart || current_user.create_cart
     @cart_items = @cart.cart_items.includes(:article)
   end
 
   def add_article_to_cart
-    article = Article.find(11)  # L'ID de l'article à ajouter
-    @cart = current_user.cart
+    article = Article.find(params[:article_id])  # Récupérer l'article par son ID
+    @cart = current_user.cart || current_user.create_cart
     @cart_item = @cart.cart_items.find_or_create_by(article: article)
-    @cart_item.increment(:quantity)  # Ajoute 1 à la quantité
+    @cart_item.increment(:quantity)  # Ajouter 1 à la quantité
     @cart_item.save
-
+  
     redirect_to cart_path, notice: "L'article a été ajouté au panier."
   end
+  
 
   def remove_article_from_cart
     article = Article.find(params[:article_id])  # Récupère l'article par son ID
