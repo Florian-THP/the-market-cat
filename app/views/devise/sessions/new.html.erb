@@ -5,14 +5,20 @@
 
   <!-- Section droite : Formulaire -->
   <div class="right-section">
+
     <!-- Barre de navigation spécifique à la page de connexion -->
-    <div class="login-navbar">
-      <%= link_to root_path, class: "login-nav-home" do %>
-        <i class="fas fa-home"></i> Accueil
-      <% end %>
-      <%= image_tag "logo_chat.png", alt: "Logo chat", class: "login-nav-logo" %>
-    </div>
-    
+  <div class="login-navbar">
+  <div class="nav-left">
+    <%= link_to root_path, class: "login-nav-home" do %>
+      <%= image_tag "logo_home.png", alt: "Logo maison", class: "home-logo" %>
+      <i class="fas fa-home"></i> Accueil
+    <% end %>
+  </div>
+  <div class="nav-right">
+    <%= image_tag "logo_chat.png", alt: "Logo chat", class: "login-nav-logo" %>
+  </div>
+</div>
+
     <!-- Titre de la page -->
     <h2>Connexion</h2>
 
@@ -35,7 +41,7 @@
           <%= link_to "Mot de passe oublié ?", new_password_path(resource_name), class: "link-forgot-password" %>
         </div>
       <% end %>
-
+      
       <div class="form-group">
         <%= f.submit "Se connecter", class: "btn-login" %>
       </div>

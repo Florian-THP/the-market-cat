@@ -52,26 +52,54 @@ body {
   margin-bottom: 2rem;
 }
 
+.nav-left {
+  display: flex; /* Garde les éléments alignés horizontalement */
+  align-items: center; /* Aligne verticalement */
+}
 
-.login-navbar .login-nav-home  {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  font-size: 1rem;
-  font-family: 'Space Grotesk', sans-serif; /* Police Space Grotesk */
-  color: #5c5c5c;
+.login-navbar .login-nav-home {
+  display: flex; /* Garde l'alignement avec les autres éléments */
+  align-items: center; /* Aligne verticalement le texte et l'icône */
+  text-decoration: none; /* Supprime le soulignement */
+  font-size: 20px; /* Taille de la police selon la maquette */
+  font-family: 'Space Grotesk', sans-serif; /* Police spécifique */
+  font-weight: 500; /* Épaisseur du texte */
+  color: #3D1B0B; /* Couleur exacte (déjà définie) */
+  line-height: 25.52px; /* Hauteur de ligne pour correspondre à la maquette */
+  letter-spacing: -0.1em; /* Espacement entre les lettres */
+  text-align: center; /* Centre le texte horizontalement */
+  text-underline-position: from-font; /* Positionne les soulignements correctement */
+  text-decoration-skip-ink: none; /* Inclut tous les soulignements */
+  opacity: 1; /* Assurez-vous que le texte est visible */
+  gap: 0px; /* Pas d'espace supplémentaire */
 }
 
 .login-navbar .login-nav-home i {
   margin-right: 0.5rem;
 }
 
-  .login-navbar .login-nav-logo {
-    height: 50px; /* Taille du logo */
-    max-width: 100px; /* Limite la largeur */
-    object-fit: contain; /* Préserve les proportions du logo */
-    display: block; /* Assure un bon comportement */
-  }
+/* Logo maison avant le lien Accueil */
+.login-navbar .login-nav-home .home-logo {
+  width: 15px; /* Largeur exacte selon Figma */
+  height: 15px; /* Hauteur exacte selon Figma */
+  margin-right: 8px; /* Espacement entre le logo et le texte */
+  display: inline-block; /* Aligne bien avec le texte */
+}
+
+/* Section droite de la navbar */
+.nav-right {
+  display: flex; /* Pour aligner proprement */
+  align-items: center; /* Centre verticalement */
+  margin-left: auto; /* Décale à droite */
+}
+
+.login-navbar .login-nav-logo {
+  width: 146px; /* Largeur combinée selon votre maquette (chat + texte) */
+  height: 57px; /* Hauteur combinée */
+  object-fit: contain; /* Préserve les proportions */
+  display: block; /* Assure un bon comportement */
+}
+
 
 /* Titre */
 h2 {
@@ -97,8 +125,8 @@ h2 {
 }
 
 .form-input {
-  width: 100%;
-  padding: 0.8rem;
+  width: 98%;
+  height: 45px;
   margin-top: 0.5rem;
   border: 1px solid #cccccc;
   border-radius: 30px; /* Bord arrondi à 30px */
@@ -109,16 +137,31 @@ h2 {
   color: #aaaaaa;
 }
 
+
+/* Uniformise la largeur de .remember-me avec .form-group */
 .remember-me {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  font-size: 0.9rem;
+  display: flex; /* Maintient l'alignement des éléments */
+  align-items: center; /* Centre verticalement la case et le texte */
+  justify-content: flex-start; /* Aligne tous les éléments au début */
+  width: 100%; /* Prend toute la largeur disponible */
+  max-width: 500px; /* Assure la même largeur que le champ mot de passe */
+  position: relative; /* Nécessaire pour positionner le lien à droite */
 }
 
+/* Positionne le lien "Mot de passe oublié ?" */
+.link-forgot-password {
+  position: absolute; /* Permet de sortir du flux normal */
+  right: 0; /* Aligne le lien sur le bord droit */
+  top: 50%; /* Centre verticalement dans la div */
+  transform: translateY(-50%); /* Ajuste parfaitement le centrage vertical */
+  font-size: 14px; /* Taille fixe du texte en pixels */
+  text-decoration: none; /* Supprime le soulignement */
+  color: #333333; /* Couleur neutre */
+}
+
+/* Maintient l'espacement entre la case à cocher et le texte */
 .remember-checkbox {
-  margin-right: 0.5rem;
-  letter-spacing: normal;
+  margin-right: 5px; /* Espace de 5px entre la case à cocher et le label */
 }
 
 
