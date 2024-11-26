@@ -2,7 +2,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap');
 
-
 h2 {
   font-size: 70px;
   letter-spacing: -8px;
@@ -23,8 +22,6 @@ p {
   size: 20px;
   line-height: normal;
 }
-
-
 
 .container-contact {
   height: 500px;
