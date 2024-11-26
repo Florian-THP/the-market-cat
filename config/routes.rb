@@ -13,4 +13,8 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   root "article#index"
   resources :articles
+
+  get '/contact', to: 'static_pages#contact'
+
+  
 end
