@@ -1,4 +1,6 @@
-/* CSS global */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+
 body {
   font-family: 'Roboto', sans-serif;
   background-color: #ffffff;
@@ -15,13 +17,10 @@ body {
 
   .left-section {
     flex: 0.6; /* 60% de la largeur */
-    background-color: #f9f7eb; /* Couleur de fond (à adapter à ta maquette) */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0; /* Supprime toutes les marges */
-    padding: 0; /* Supprime tout espace intérieur */
-    overflow: hidden; /* Empêche tout débordement */
+    background-image: url('image_page-de-connexion.png');
+    background-size: cover;
+    background-position: center;
+    background-color: #f9f7eb; 
   }
 
 .left-section .large-image {
@@ -32,12 +31,6 @@ body {
     padding: 0; /* Supprime les espacements */
     display: block; /* Assure que l'image est un élément de bloc */
   }
-  
-
-
-
-
-
 
 /* Section droite : formulaire */
 .right-section {
@@ -85,10 +78,9 @@ h2 {
     font-size: 70px;
     letter-spacing: -6px;
     color: #8B4421;
-    font-weight: 450;
-    font-family: "Space Grotesk", serif;
+    font-weight: 500;
+    font-family: "Space Grotesk", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 400;
     font-style: normal;
 }
 
@@ -126,7 +118,9 @@ h2 {
 
 .remember-checkbox {
   margin-right: 0.5rem;
+  letter-spacing: normal;
 }
+
 
 /* Bouton de connexion */
 .btn-login {
