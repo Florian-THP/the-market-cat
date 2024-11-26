@@ -11,10 +11,15 @@ Rails.application.routes.draw do
   # get "service-worker" => "rails/pwa#service_worker", as: :pwa_service_worker
 
   # Defines the root path route ("/")
-  root "article#index"
+  root "articles#index"
   resources :articles
 
-  get '/contact', to: 'static_pages#contact'
+  resource :cart, only: [:show] do
+    post 'add_article_to_cart', on: :collection  # Ajout d'un article spécifique au panier
+    delete 'remove_article_from_cart', on: :collection  # Suppression d'un article spécifique du panier
+    delete 'clear_cart', on: :collection 
+  end
 
-  
+  get '/contact', to: 'static_pages#contact'
 end
+
