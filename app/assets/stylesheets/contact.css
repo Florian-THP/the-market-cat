@@ -24,6 +24,7 @@ p {
 }
 
 .container-contact {
+  background-color: yellow;
   height: 500px;
   width: 90%;
   display: flex;
@@ -32,6 +33,7 @@ p {
   margin-left: auto;
   margin-right: auto;
   margin-top: 100px;
+  overflow: hidden;
 }
 
 .info-contact {
@@ -51,6 +53,10 @@ p {
 
 }
 
+.image-contact {
+  width: 50%;
+  max-width: 100%;
+}
 .map-image {
   width: 85%;
   height: 85%;
