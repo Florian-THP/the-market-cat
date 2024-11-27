@@ -50,7 +50,7 @@
       <p class="textPanier">Livraison:</p>
       <p class="emailUser"><%= current_user.email %></p>
     </div>
-   <%= button_to "Passer commande (NEXT GEN)",
+   <%= button_to "Payer",
               checkout_create_path(total: @cart_items.sum { |item| item.quantity * item.article.price }),
               class: "payoutBtn",
               data: { turbo: false } %>

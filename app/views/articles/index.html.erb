@@ -1,3 +1,4 @@
+
 <div class="jumbotron">
   <%= render 'layouts/navbar' %>
   <div class="container_jumbo">
@@ -32,6 +33,7 @@
                   <strong><%= number_to_currency(article.price, unit: " ") %>€</strong>
                   </div>
                    <div>
+                    
                   <%= button_to add_article_to_cart_cart_path(article_id: article), method: :post, class: 'addcartindex', id: "add_to_cart_#{article.id}" do %>
                     <%= image_tag('panier.png', class: 'addcarticon', id: "image_#{article.id}") %>
                   <% end %>
