@@ -9,14 +9,23 @@ class CartsController < ApplicationController
   end
 
   def add_article_to_cart
-    article = Article.find(params[:article_id]) 
+    article = Article.find(params[:article_id])
+    quantity = params[:quantity].to_i # Récupère la quantité envoyée
+    quantity = 1 if quantity <= 0 # Définit une quantité minimale de 1
+  
     @cart = current_user.cart || current_user.create_cart
     @cart_item = @cart.cart_items.find_or_create_by(article: article)
-    @cart_item.increment(:quantity) 
+  
+    # Ajoute la quantité spécifiée
+    @cart_item.increment(:quantity, quantity)
     @cart_item.save
   
- 
+    flash[:notice] = "#{quantity} article(s) ajouté(s) au panier."
+    redirect_to root_path
   end
+
+ 
+  
   
 
   def remove_article_from_cart
