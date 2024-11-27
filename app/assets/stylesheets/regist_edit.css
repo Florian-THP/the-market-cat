@@ -23,11 +23,15 @@
     .regiE_infos{
     margin-top: 0px;
     margin-bottom: 10px;
+    
+
     }
 
     .email-info-container{
-      
+        border-top: 1px solid #c8c8c9;
+        border-bottom: 1px solid #c8c8c9;
         margin-bottom: 30px;
+        width: 400px;
     }
 
     .regiE_txt_input{
