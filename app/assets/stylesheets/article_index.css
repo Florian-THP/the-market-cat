@@ -26,10 +26,11 @@
 .btn_article {
   background-color: transparent;
   border: none;
+  cursor: pointer;
 }
 
   h1 {
-    font-size: 100px;
+    font-size: 10vh;
     letter-spacing: -10px;
     color: #8B4421;
     font-weight: 550;
@@ -59,16 +60,19 @@ h3 {
     color: black;
     margin-left: 12px;
     text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
 
 }
 
   .articles-container {
-
     padding-top: 30px;
     padding-left: 80px;
     padding-right: 80px;
     color: #8B4421;
-    margin: 50px;
+
 
   }
 
@@ -80,7 +84,6 @@ h3 {
 
   }
   .article_img {
-
     display: flex;
     flex-direction: column;
   }
@@ -95,7 +98,7 @@ h3 {
 }
 
 .cardd{
-  width: 500px;
+  width:100%;
 }
 
   .border_article {
@@ -109,7 +112,7 @@ h3 {
     border: 1px solid #ddd;
   }
 
-  .cardd:hover {
+  .imghover:hover {
     transform: scale(1.03);
   }
 
@@ -143,6 +146,22 @@ h3 {
   .pagination a:hover {
     background-color: #ffffff;
     color: #6a3b09;
+  }
+
+  .addcartindex {
+    margin-right: 10px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+
+  .addcarticon {
+    width: 30px;
+  }
+  
+
+  .addcarticon:active {
+    transform: scale(0.95);
   }
 
 
@@ -180,9 +199,10 @@ h3 {
     align-items: center;
   }
 
-  h1 {
-    font-size: 80px;
-  }
+ h1 {
+  font-size: 80px;
+ }
 
-  }
+
+}
 

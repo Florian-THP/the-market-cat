@@ -1,22 +1,58 @@
-<div class = "jumbotron">
+
+<div class="jumbotron">
   <%= render 'layouts/navbar' %>
-    <div class = "container_jumbo">
-        <div class = "text-content">
-            <h1>The Market Cat</h1>
-            <h3>"Des chats qui ne griffent pas..."</h3>
-        </div>
-        <div class="image-container">
-            <%= image_tag("imageJumbo.png", alt: "Cat", class: "img_jumbo") %>
-        </div>
+  <div class="container_jumbo">
+    <div class="text-content">
+      <h1>The Market Cat</h1>
+      <h3>"Des chats qui ne griffent pas..."</h3>
     </div>
+    <div class="image-container">
+      <%= image_tag("imageJumbo.png", alt: "Cat", class: "img_jumbo") %>
+    </div>
+  </div>
 </div>
 
+<div class="articles-container">
+  <h2>Articles :</h2>
 
-<div class="articles-container" >
-<h2>Articles :</h2>
+  <turbo-frame id="articles">
+    <div class="grid" id="articles-list">
+      <% @articles.each do |article| %>
+        <div class="cardd">
+          <div class="article_img">
+            <div class="imghover">
+            <%= link_to article_path(article), class: "btn_article", data: { turbo_frame: "_top" } do %>
+              <%= image_tag("imageJumbo.png", alt: "Cat", class: "img_article") %>
+               <% end %>
+               </div>
+              <div class="border_article">
+                
+                <div class="article_name">
+                  <div>
+                  <%= article.name %> <br>
+                  <strong><%= number_to_currency(article.price, unit: " ") %>€</strong>
+                  </div>
+                   <div>
+                    
+                  <%= button_to add_article_to_cart_cart_path(article_id: article), method: :post, class: 'addcartindex', id: "add_to_cart_#{article.id}" do %>
+                    <%= image_tag('panier.png', class: 'addcarticon', id: "image_#{article.id}") %>
+                  <% end %>
+                   </div>
+                </div>
+              </div>
+          
+           
+          </div>
+        </div>
+      <% end %>
 
-<turbo-frame id="articles">
-  <%= render partial: "articles_list", locals: { articles: @articles } %>
-</turbo-frame>
+      <div class="block_card">
+        <div id="pagination">
+          <%= paginate @articles, remote: true %>
+        </div>
+      </div>
+    </div>
+  </turbo-frame>
+</div>
 
 <%= render 'layouts/footer' %>
