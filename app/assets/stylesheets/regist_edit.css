@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+
+.regiE_body{
+
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255,255,255);
+    width: 100%;
+    max-width: 1335px;
+    margin-left: auto;
+    margin-right: auto;
+}
+    .regiE_edit{
+  
+
+    }
+
+    #flo_BG{
+        margin-bottom: 0px; 
+        line-height: 1;
+    }
+
+    .regiE_infos{
+    margin-top: 0px;
+    margin-bottom: 10px;
+    
+
+    }
+
+    .email-info-container{
+        border-top: 1px solid #c8c8c9;
+        border-bottom: 1px solid #c8c8c9;
+        margin-bottom: 30px;
+        width: 400px;
+    }
+
+    .regiE_txt_input{
+       font-weight: bold;
+       font-family: 'Roboto', sans-serif;
+       color: #3D1B0B;
+       size: 20px;
+       line-height: normal;
+    }
+
+    .regiE_input_check{
+        color: rgb(61,27,11);
+    background-color: #ffffff;
+    height: 40px;
+    width: 300px;
+    padding-left: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    border: 1px solid rgb(0, 0, 0);
+    }
+
+   
+    .regiE_btn_update{
+        background-color: #8B4421;
+        color: #FFFFFF;
+        font-size: 16px;
+        letter-spacing: -5%;
+        cursor: pointer;
+        height: 40px;
+        width: 100px;
+        margin-left: 10px;
+        margin-bottom: 10px;
+        border-radius: 15px;
+        display: flex;
+        align-items: center;
+        border: 1px solid rgb(0, 0, 0);
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .regiE_btn_cancel{
+        background-color: #8B4421;
+        color: #FFFFFF;
+        font-size: 16px;
+        letter-spacing: -5%;
+        cursor: pointer;
+        height: 40px;
+        width: 150px;
+        margin-left: 10px;
+        margin-bottom: 10px;
+        border-radius: 15px;
+        display: flex;
+        align-items: center;
+        border: 1px solid rgb(0, 0, 0);
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .h3_cancel{
+        display: flex;
+        align-items: center;
+        line-height: 1;
+        font-size: 40px;
+        letter-spacing: -3px;
+        color: #E0AB3F;
+        font-weight: 450;
+        font-family: "Space Grotesk", serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+        margin-top: 40px;
+    }
+
+
+    
+
