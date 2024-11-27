@@ -3,43 +3,89 @@
 
 .article-show-container {
     display: flex;
+    flex-direction: row;
     gap: 20px;
     padding: 20px;
+    background-color: rgb(242, 242, 156);
   
     .article-image img {
+        background-color: aqua;
       display: flex;
       align-items: center;
-      margin-top: 10px;
-      margin-left: 100px;
+      margin-top: 50px;
+      margin-left: 300px;
     }
   
     .article-details {
+        background-color: rgb(255, 122, 122);
+        display: flex;
+        flex-direction: column;
+        margin-left: 30px;
 
         .article-name-show{
             font-family: sans-serif, Roboto;
-            letter-spacing: -5%;
+            letter-spacing: -3px;
             font-size: 40px ;
             max-width: 301px;
             max-height: 47px;
-            margin-top: 301px;
-            margin-left: 572px;
+            margin-top: 250px;
+            
             background-color: aquamarine;
+            color: #111111;
+            ;
 
         }
 
         .article-description{
             font-family: sans-serif, Roboto;
             letter-spacing: -5%;
-            font-size: 22px ;
+            font-size: 26px ;
+            max-width: 500px;
+            
+            
             background-color: rgb(244, 193, 104);
+            color: #888888;
+            
         }
 
         .article-price{
+            display: flex;
+            
             font-family: sans-serif, Roboto;
             letter-spacing: -5%;
             font-size: 22px ;
+
+            justify-content: flex-end;
+        
+            background-color: yellowgreen;
         }
       
     }
+    .article-btn{
+        display: flex;
+        justify-content: center;
+
+        button {
+            width: 600px;
+            height: 50px;
+            background-color: #8B4421;
+            border-radius: 15px;
+            border: none;
+            color: #FFFFFF;
+            font-size: 20px;
+            letter-spacing: -5%;
+            cursor: pointer;
+            
+        }
+
+        .button:active {
+            transform: scale(0.97);
+        }
+    }
+    
+  }
+  .render_footer{
+
   }
   
+  @media (max-width: 768px) { }
