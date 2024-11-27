@@ -29,7 +29,7 @@ nav {
     border-radius: 15px;
     display: flex;
     align-items: center;
-    font-weight: '00;
+    font-weight: 400;
 }
 
 .linknav {
@@ -106,3 +106,35 @@ nav {
     width: 30px;
     margin-left: 15px;
 }
+
+@media (max-width: 768px) {
+    nav {
+        max-width: 550px;
+    }
+
+    .logonav {
+        width: 100px;
+    }
+
+    .containerLink {
+        margin-left: 20px;
+        width: 100%;
+    }
+
+    .btn-panier {
+        margin-left: 10px;
+    }
+
+    .btn-log {
+        width: 100px;
+        height: 40px;
+        background-color: #8B4421;
+        border-radius: 15px;
+        border: none;
+        color: #FFFFFF;
+        font-size: 15px;
+        letter-spacing: -5%;
+        cursor: pointer;
+        margin-right: 10px;
+    }
+  }

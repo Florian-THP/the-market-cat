@@ -10,8 +10,10 @@
 
 <div class="articlepanier">
   <% if @cart_items.any? %>
-    <div class="article-cart">
+  <div class="article-cart">
       <% @cart_items.each do |cart_item| %>
+
+         <div class="articleshowpanier">
         <div class="imgTilteArticle">
           <%= image_tag 'chattest.png', alt: 'Panier', class: 'imgArticlePanier' %>
           <p class="nameArticle"><%= cart_item.article.name %></p>
@@ -27,8 +29,10 @@
             <%= image_tag("corbeille.png", alt: "Supprimer", class: "delete-icon") %>
           <% end %>
         </div>
+        </div>
       <% end %>
-    </div>
+     </div>
+
 
     <div class="trait"></div>
 
