@@ -11,25 +11,12 @@
     </div>
 </div>
 
-<div class="articles-container">
-  <h2>Articles</h2>
-  <div class="grid">
-    <% @articles.each do |article| %>
-      <div class="article">
-        <%= image_tag("imageJumbo.png", alt: "Cat", class: "img_jumbo") %>
-        <div class="border_article">
-        
-            <p><%= article.name %> <br>
-            <strong><%= article.price %></strong>
-            <%= link_to "Voir", article_path(article) %>
-            </p>
-        </div>
-    </div>
-    <% end %>
-  </div>
-</div>
 
+<div class="articles-container" >
+<h2>Articles :</h2>
 
+<turbo-frame id="articles">
+  <%= render partial: "articles_list", locals: { articles: @articles } %>
+</turbo-frame>
 
-<%= paginate @articles %>
-
+<%= render 'layouts/footer' %>
