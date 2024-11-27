@@ -29,7 +29,7 @@ nav {
     border-radius: 15px;
     display: flex;
     align-items: center;
-    font-weight: '00;
+    font-weight: 400;
 }
 
 .linknav {
@@ -37,7 +37,6 @@ nav {
     color: #3D1B0B;
     letter-spacing: -1px;
     text-decoration: none;
-    font: ;
 }
 
 .linkuser {
