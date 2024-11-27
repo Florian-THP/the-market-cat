@@ -113,10 +113,15 @@ h2 {
 }
 
 /* Formulaire */
+
+.new_user {
+  width: 60%;
+}
+
 .form-group {
   margin-bottom: 1.5rem;
   width: 100%;
-  max-width: 500px; /* Largeur maximale des champs */
+  max-width: 700px; /* Largeur maximale des champs */
 }
 
 .form-label {
@@ -124,13 +129,29 @@ h2 {
   color: #333333;
 }
 
+.input_form {
+display: flex;
+align-items: center;
+width: 98%;
+height: 48px;
+border: 1px solid gray;
+border-radius: 10px;
+}
+
+.logo-input-form {
+  width: 7%;
+  margin-left: 5px;
+  margin-right: 5px;
+}
 .form-input {
-  width: 98%;
-  height: 45px;
-  margin-top: 0.5rem;
-  border: 1px solid #cccccc;
-  border-radius: 30px; /* Bord arrondi à 30px */
-  font-size: 1rem;
+border: none;
+width: 100%;
+height: 80%;
+border-radius: 10px;
+}
+
+input:focus{
+  outline: none;
 }
 
 .form-input::placeholder {
@@ -152,6 +173,7 @@ h2 {
 .link-forgot-password {
   position: absolute; /* Permet de sortir du flux normal */
   right: 0; /* Aligne le lien sur le bord droit */
+  margin-right: 3px;
   top: 50%; /* Centre verticalement dans la div */
   transform: translateY(-50%); /* Ajuste parfaitement le centrage vertical */
   font-size: 14px; /* Taille fixe du texte en pixels */
@@ -216,4 +238,8 @@ h2 {
 
 .link-signup:hover {
   text-decoration: underline;
+}
+
+@media (max-width: 768px) { 
+  
 }
