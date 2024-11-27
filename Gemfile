@@ -22,6 +22,8 @@ gem "devise"
 
 gem 'kaminari'
 
+gem "hotwire-rails", "~> 0.1.3"
+
 gem "stripe"
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
 gem "bcrypt", "~> 3.1.7"
