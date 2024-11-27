@@ -1,3 +1,100 @@
-.tab-title {
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap');
+
+.body-profile {
+width: 100%;
+max-width: 1335px;
+margin-left: auto;
+margin-right: auto;
+}
+
+h2 {
+
+}
+
+h3 {
+
+}
+
+.my-info {
+  width: 300px;
+  margin-top: -30px;
+}
+
+.email-info-container {
+  display: flex;
+  font-family: 'Roboto', sans-serif;
+  color: #3D1B0B;
+  line-height: normal;
+}
+
+.btn-primary {
+  width: 100px;
+  height: 40px;
+  background-color: #8B4421;
+  border-radius: 15px;
+  border: none;
+  color: #FFFFFF;
+  font-size: 16px;
+  letter-spacing: -5%;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.btn-primary:active {
+  transform: scale(0.97);
+}
+
+.orders-containers {
+  margin-top: -10px;
+  width: 60%;
+  border: 1px;
+  border-radius: 15px;
+  border: 1px solid #D9D9D9;
+  padding-bottom: 20px;
+
+}
+
+.column-name-line {
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+
+.column-name{
+  display: flex;
+  justify-content: center;
+  width: 25%;
+  font-weight: bold;
+
+}
+
+.price-element {
+  
+}
+
+.order-info-line {
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #D9D9D9;
+  border-radius: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5px;
+
+}
+
+.order-tab {
+  display: flex;
+  justify-content: center;
+  width: 25%;
+}
+
+.no-order-yet {
+  padding-left: 10px;
 }

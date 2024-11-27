@@ -1,27 +1,52 @@
+<%= render 'layouts/navbar' %>
 
-<h3>Mes infos</h3>
+<div class="body-profile">
 
-<p><%= current_user.email%></p>
-<%= button_to "Modifier", edit_user_registration_path(current_user), class: "btn-primary" %>
-<br><br><br>
+  <h2>Mon profil</h2>
+  <h3>Mes infos</h3>
 
 
-<h3>Mes commandes</h3>
-<div class="tab-title">Date d'achat</div>
-<div class="tab-title">Numéro de commande</div>
-<div class="tab-title">Status</div>
-<div class="tab-title">Prix total</div>
+  <div class="my-info">
+     <div class="email-info-container">
+      <p><%= current_user.email %></p>
+    </div>
+      <%= button_to "Modifier", edit_user_registration_path(current_user), method: :get, class: "btn-primary" %>
+  </div>
+  <br><br><br>
 
-<div><% if @orders.any? %>
-  <% @orders.each do |order| %>
-    <p><%= order.created_at.strftime("%d/%m/%Y") %></p>
-    <p><%= order.stripe_customer_id %></p>
-    <p><%= order.status %></p>
-    <p><%= number_to_currency(order.total_price, unit: "€")%></p>
-  <% end %>
-<% else %>
-  <p>Vous n'avez pas encore passé votre première commande.</p>
-<% end %>
+  <h3>Mes commandes</h3>
+
+  <div class="orders-containers">
+
+    <div class="column-name-line">
+      <p class="column-name">Date d'achat</p>
+      <p class="column-name">Numéro de commande</p>
+      <p class="column-name">Status</p>
+      <p class="column-name price-element">Prix total</p>
+    </div>
+
+    <% if @orders.any? %>
+      <% @orders.each do |order| %>
+      <div class="order-info-line">
+        <p class="order-tab"><%= order.created_at.strftime("%d/%m/%Y") %></p>
+        <p class="order-tab"><%= order.stripe_customer_id %></p>
+        <p class="order-tab"><%= order.status %></p>
+        <p class="order-tab"><%= number_to_currency(order.total_price, unit: "€")%></p>
+      </div>
+      <% end %>
+      
+
+    <div class="no-order-yet">
+    <% else %>
+      <p>Vous n'avez pas encore passé votre première commande.</p>
+    <% end %>
+    </div>
+
+  </div>
+
 </div>
+
+<%= render 'layouts/footer' %>
+
 
 
