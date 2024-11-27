@@ -17,10 +17,14 @@ gem "stimulus-rails"
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
 
+gem 'dotenv-rails'
+
 # Devise
 gem "devise"
 
 gem 'kaminari'
+
+gem "hotwire-rails", "~> 0.1.3"
 
 gem "stripe"
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
