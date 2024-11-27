@@ -50,6 +50,11 @@ class CheckoutController < ApplicationController
         price: cart_item.article.price
       )
     end
+    
+
+    #Call send mail confirmation with command
+    UserMailer.order_confirmation(current_user, order).deliver_now
+
 
     # Vider le panier
     cart.cart_items.destroy_all if cart.present?

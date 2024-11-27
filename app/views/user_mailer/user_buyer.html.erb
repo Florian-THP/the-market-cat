@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+
+
+  <body>
+    <h1>Salut <%= @user.name %> !</h1>
+    <p>
+    Miaou ! 😺 Nous sommes ravis de vous compter parmi nos heureux clients amoureux des chats. 
+    Votre commande est prête et contient des clichés absolument craquants qui, nous en sommes certains, feront fondre votre cœur ! 🐾
+    </p>
+    <p>
+    Voici un résumé de votre commande :
+    <%= @commande.each de |commande| %>
+    <%= @article.title %>
+
+    <% end %>
+      
+    </p>
+    <p> 
+    
+    Vous trouverez vos adorables photos de chats en pièce jointe. Elles sont prêtes à embellir votre journée et apporter une touche féline à votre vie !
+    Pour accéder à ton espace client, connecte-toi via : <%= @url %>.
+    
+    </p>
+
+    <p> 
+
+    Ronronnements et pattes de velours,  
+    L’équipe de [Nom de votre boutique]  
+    📧 [Email de contact]  
+    🌐 [Lien vers le site web]
+    </p>
+  </body>
+</html>
