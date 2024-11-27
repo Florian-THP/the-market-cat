@@ -30,7 +30,7 @@
 }
 
   h1 {
-    font-size: 100px;
+    font-size: 10vh;
     letter-spacing: -10px;
     color: #8B4421;
     font-weight: 550;
@@ -68,12 +68,11 @@ h3 {
 }
 
   .articles-container {
-
     padding-top: 30px;
     padding-left: 80px;
     padding-right: 80px;
     color: #8B4421;
-    margin: 50px;
+
 
   }
 
@@ -99,7 +98,7 @@ h3 {
 }
 
 .cardd{
-  width: 400px;
+  width:100%;
 }
 
   .border_article {
@@ -157,8 +156,9 @@ h3 {
   }
 
   .addcarticon {
-    width: 35px;
+    width: 30px;
   }
+  
 
   .addcarticon:active {
     transform: scale(0.95);
@@ -199,9 +199,10 @@ h3 {
     align-items: center;
   }
 
-  h1 {
-    font-size: 80px;
-  }
+ h1 {
+  font-size: 80px;
+ }
 
-  }
+
+}
 
