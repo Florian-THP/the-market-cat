@@ -55,6 +55,8 @@ class CheckoutController < ApplicationController
     #Call send mail confirmation with command
     UserMailer.order_confirmation(current_user, order).deliver_now
 
+    AdminMailer.order_send(current_user, order).deliver_now
+
 
     # Vider le panier
     cart.cart_items.destroy_all if cart.present?

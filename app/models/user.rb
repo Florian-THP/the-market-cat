@@ -12,4 +12,8 @@ class User < ApplicationRecord
   has_many :order_items, through: :orders # Accès aux items des commandes via les commandes
   has_many :purchased_articles, through: :order_items, source: :article # Accès direct aux articles achetés via les items des commandes
 
+
+  scope :admins, -> { where(is_admin: true) }
+
+  
 end
