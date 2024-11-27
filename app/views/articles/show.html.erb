@@ -14,10 +14,13 @@
     <div class="article-price">
       <span><%= @article.price %>€</span>
     </div>
-  
-    <div class="article-btn">
-     
+    <div class="article-enc-quant">
+      <p class="article-Q">Quantité:</p> 
+      <span class="article-Stock">En stock</span>
     </div>
+
+  
+    <%= button_to 'Ajouter au panier', add_article_to_cart_cart_path(article_id: @article.id), method: :post, class: 'article-btn' %>
   </div>
 </div>
 
