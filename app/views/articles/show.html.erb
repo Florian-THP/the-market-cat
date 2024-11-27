@@ -1,4 +1,5 @@
 <%=render 'layouts/navbar' %>
+
 <div class="article-show-container">
   <!-- Image du produit -->
   <div class="article-image">
@@ -11,9 +12,15 @@
     <p class="article-description"><%= @article.description %></p>
   
     <div class="article-price">
-      <span><%= number_to_currency(@article.price, unit: "€") %></span>
+      <span><%= @article.price %>€</span>
     </div>
-   </div>
+  
+    <div class="article-btn">
+      <%= button_to 'Ajouter au panier', add_article_to_cart_cart_path(article_id: @article.id), method: :post, class: 'btn btn-primary' %>
+    </div>
+  </div>
 </div>
 
-<%=render 'layouts/footer' %>
+<div class="render_footer">
+  <%=render 'layouts/footer' %>
+</div>
