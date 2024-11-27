@@ -30,7 +30,7 @@
 }
 
   h1 {
-    font-size: 100px;
+    font-size: 10vh;
     letter-spacing: -10px;
     color: #8B4421;
     font-weight: 550;
@@ -68,12 +68,11 @@ h3 {
 }
 
   .articles-container {
-
     padding-top: 30px;
     padding-left: 80px;
     padding-right: 80px;
     color: #8B4421;
-    margin: 50px;
+
 
   }
 
@@ -99,7 +98,7 @@ h3 {
 }
 
 .cardd{
-  width: 400px;
+  width:100%;
 }
 
   .border_article {
@@ -157,12 +156,82 @@ h3 {
   }
 
   .addcarticon {
-    width: 35px;
+    width: 30px;
   }
+  
 
   .addcarticon:active {
     transform: scale(0.95);
   }
+
+  .pagination a, .pagination span {
+    margin: 0 5px;
+    padding: 2px 5px;
+    text-decoration: none;
+    color: #333;
+    border: none;
+    border-radius: 7px;
+}
+
+
+  #pagination {
+    text-align: center;
+    margin: 20px;
+  }
+  
+  #pagination .page {
+    width: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px;
+    border: none;
+    margin-left: 10px;
+  }
+  
+  #pagination .current {
+    background-color: #8B4421;
+    color: #fff;
+    border-color: #8B4421;
+  }
+
+  #pagination a {
+  }
+  
+  #pagination a:hover {
+    background-color: #8B4421;
+    color: #fff;
+  }
+  
+  #pagination .next {
+    background-color: none;
+    border: none;
+    margin-left: 0px;
+  }
+
+  #pagination .last {
+    background-color: none;
+    border: none;
+    margin-left: 0px;
+  }
+
+  #pagination .prev {
+    background-color: none;
+    border: none;
+    margin-left: 0px;
+  }
+
+  #pagination .first {
+    background-color: none;
+    border: none;
+    margin-left: 0px;
+  }
+
+
+  
+  
+  
+  
 
 
   @media (max-width: 768px) { 
@@ -199,9 +268,10 @@ h3 {
     align-items: center;
   }
 
-  h1 {
-    font-size: 80px;
-  }
+ h1 {
+  font-size: 80px;
+ }
 
-  }
+
+}
 
