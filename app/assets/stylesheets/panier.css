@@ -1,0 +1,174 @@
+
+.panierTitle {
+    font-size: 70px;
+    letter-spacing: -8px;
+    color: #8B4421;
+    font-weight: 450;
+    font-family: "Space Grotesk", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    display: flex;
+    align-items: end;
+}
+
+.panierImgTitle {
+    width: 70px;
+    margin-left: 30px;
+}
+
+.container-title-panier {
+    display: flex;
+    align-items: center;
+    width: auto;
+    padding: 10px;
+    margin-bottom: 30px;
+}
+
+.articlepanier {
+    width: 80%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    color: #3D1B0B;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    letter-spacing: -0.8px;
+    max-width: 1200px;
+}
+
+.article-cart {
+   width: 100%;
+}
+
+.imgTilteArticle {
+    display: flex;
+    align-items: center;
+}
+
+.nameArticle {
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.imgArticlePanier {
+    width: 80px;
+}
+
+.containerInfo {
+    display: flex;
+    align-items: center;
+}
+
+.infoArticlePanier {
+    background-color: #FAEED8;
+    height: 50px;
+    width: 200px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.priceArticle {
+    font-weight: 600;
+}
+
+.trait {
+    background-color: #CECECE;
+    width: 100%;
+    height: 1px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.containerTotal {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.textPanier {
+    color: #3D1B0B;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: -0.8px;
+    margin-left: 30px;
+    font-size: 18px;
+}
+
+.total {
+    background-color: #FAEED8;
+    height: 50px;
+    width: 200px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-right: 30px;
+}
+
+.detail {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #3D1B0B;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    letter-spacing: -0.8px;
+    font-size: 18px;
+}
+
+.emailUser {
+    margin-right: 35px;
+    text-decoration: underline;
+}
+
+.deleteBtn {
+    background-color: transparent;
+    border: none;
+}
+
+.deleteBtn:active {
+    transform: scale(0.95);
+}
+
+.delete-icon {
+    width: 20px;
+}
+
+.payoutBtn {
+    background-color: #8B4421;
+    border-radius: 15px;
+    height: 50px;
+    width: 60%;
+    color: #FFFFFF;
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+    font-size: 20px;
+    display: block;
+    cursor: pointer;
+}
+
+.payoutBtn:active {
+    transform: scale(0.98);
+}
+
+.delete-panier {
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+
+.articleshowpanier {
+    display: flex;
+    justify-content: space-between;
+}

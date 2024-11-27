@@ -2,7 +2,6 @@
   <%= image_tag 'logo.png', alt: 'Mon Logo', class: 'logonav' %>
   <div class="containerLink">
     <%= link_to 'Accueil', root_path, class: 'linknav' %>
-    <p class="linknav">Catalogue</p>
     <div class="linkuser">
      <% if current_user%>
      <%= image_tag 'profiluser.png', alt: 'profil', class: 'btnnav-icon' %>
@@ -16,7 +15,7 @@
      <% end %>
     </div>
   </div>
-  <%= button_to new_user_session_path, method: :get, class: 'btn-panier' do %>
+  <%= button_to cart_path, method: :get, class: 'btn-panier' do %>
   Panier
   <%= image_tag 'panier.png', alt: 'Panier', class: 'panier-icon' %>
   <% end %>
