@@ -27,5 +27,7 @@ scope '/checkout' do
 end
 
   get '/contact', to: 'static_pages#contact'
+
+  resources :profiles, only: [:show]
 end
 
