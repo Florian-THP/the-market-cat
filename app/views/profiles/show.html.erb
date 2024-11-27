@@ -1,0 +1,27 @@
+
+<h3>Mes infos</h3>
+
+<p><%= current_user.email%></p>
+<%= button_to "Modifier", edit_user_registration_path(current_user), class: "btn-primary" %>
+<br><br><br>
+
+
+<h3>Mes commandes</h3>
+<div class="tab-title">Date d'achat</div>
+<div class="tab-title">Numéro de commande</div>
+<div class="tab-title">Status</div>
+<div class="tab-title">Prix total</div>
+
+<div><% if @orders.any? %>
+  <% @orders.each do |order| %>
+    <p><%= order.created_at.strftime("%d/%m/%Y") %></p>
+    <p><%= order.stripe_customer_id %></p>
+    <p><%= order.status %></p>
+    <p><%= number_to_currency(order.total_price, unit: "€")%></p>
+  <% end %>
+<% else %>
+  <p>Vous n'avez pas encore passé votre première commande.</p>
+<% end %>
+</div>
+
+

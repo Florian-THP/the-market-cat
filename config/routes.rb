@@ -21,5 +21,7 @@ Rails.application.routes.draw do
   end
 
   get '/contact', to: 'static_pages#contact'
+
+  resources :profiles, only: [:show]
 end
 
