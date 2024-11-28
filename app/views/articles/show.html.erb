@@ -3,7 +3,7 @@
 <div class="article-show-container">
   <!-- Image du produit -->
   <div class="article-image">
-    <%= image_tag("chattest.png", alt: @article.name) %>
+     <%= image_tag 'chattest.png', alt: 'chat', class: 'img-article' %>
   </div>
 
   <!-- Détails du produit -->
@@ -12,12 +12,31 @@
     <p class="article-description"><%= @article.description %></p>
   
     <div class="article-price">
-      <span><%= @article.price %>€</span>
+      <div class="size">
+        <%= image_tag 'size.png', alt: 'size', class: 'size-icon' %>
+        <p class="text-size">60x40</p>
+      </div>
+      <span class="price-article-show"><%= @article.price %>€</span>
     </div>
-  
-    <div class="article-btn">
-      <%= button_to 'Ajouter au panier', add_article_to_cart_cart_path(article_id: @article.id), method: :post, class: 'btn btn-primary' %>
-    </div>
+   
+
+<%= form_with url: add_article_to_cart_cart_path(article_id: @article.id), method: :post, class: 'article-form' do |f| %>
+  <div class="input-quantity">
+    <input 
+  type="number" 
+  name="quantity" 
+  placeholder="Quantité"  
+  class="quantity-input"
+  oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+>
+<div class="info-stock">
+   <%= image_tag 'ok.png', alt: 'coche', class: 'coche-img' %>
+   <p class="stock">En Stock</p>
+</div>
+  </div>
+  <%= f.submit 'Ajouter au panier', class: 'article-btn' %>
+<% end %>
+
   </div>
 </div>
 

@@ -40,7 +40,10 @@
       <p class="textPanier">Total:</p>
       <div class="total">
         <p>Quantité : <%= @cart_items.sum { |item| item.quantity } %></p>
-        <p class="priceArticle"><%= @cart_items.sum { |item| item.quantity * item.article.price } %> €</p>
+        <p class="priceArticle">
+         <%= (@cart_items.sum { |item| item.quantity * item.article.price } * 100).ceil / 100.0 %> €
+        </p>
+
       </div>
     </div>
 
@@ -50,11 +53,15 @@
       <p class="textPanier">Livraison:</p>
       <p class="emailUser"><%= current_user.email %></p>
     </div>
+   <%= button_to "Payer",
+              checkout_create_path(total: @cart_items.sum { |item| item.quantity * item.article.price }),
+              class: "payoutBtn",
+              data: { turbo: false } %>
 
-    <button class="payoutBtn">Payer</button>
-     <%= button_to 'Vider le panier', clear_cart_cart_path, method: :delete, class: "delete-panier", style: "cursor: pointer;" %>
-
+    <%= button_to 'Vider le panier', clear_cart_cart_path, method: :delete, class: "delete-panier", style: "cursor: pointer;" %>
+   
   </div>
   <% else %>
     <p>Votre panier est vide.</p>
+    
   <% end %>

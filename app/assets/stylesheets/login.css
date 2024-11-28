@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
 
-
+body {
+  margin: 0;
+}
 
 /* Container global de la page */
 .login-container {
@@ -14,13 +16,22 @@
   box-sizing: border-box; /* Gère les marges globales */
 }
 
-  .left-section {
+  .left-section-connexion {
     flex: 0.6; /* 60% de la largeur */
     background-image: url('image_page-de-connexion.png');
     background-size: cover;
     background-position: center;
     background-color: #f9f7eb; 
   }
+
+  .left-section-inscription {
+    flex: 0.6; /* 60% de la largeur */
+    background-image: url('image_page-inscription.png');
+    background-size: cover;
+    background-position: center;
+    background-color: #f9f7eb; 
+  }
+
 
 .left-section .large-image {
     max-width: 100%; /* L'image s'ajustera à la largeur de la section */
@@ -202,6 +213,22 @@ input:focus{
   transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
+/* Bouton d'inscription */
+.btn-signup {
+  display: block;
+  width: 250px; /* Largeur spécifique au bouton */
+  height: 50px; /* Hauteur spécifique au bouton */
+  background-color: #8B4421; /* Couleur spécifique */
+  border-radius: 15px; /* Arrondi spécifique */
+  border: none;
+  color: #FFFFFF;
+  font-size: 20px;
+  letter-spacing: -5%;
+  cursor: pointer;
+  margin: 0 auto; /* Centre le bouton horizontalement */
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
 .btn-login:active {
   transform: scale(0.97); /* Effet d'écrasement au clic */
 }
@@ -225,6 +252,7 @@ input:focus{
   font-size: 1rem;
 }
 
+
 .no-account-text {
   color: #333333;
 }
@@ -237,6 +265,31 @@ input:focus{
 
 .link-signup:hover {
   text-decoration: underline;
+}
+
+/* Lien vers connexion */
+.login-link {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 1rem;
+}
+
+.already-account-text {
+  color: #333333;
+}
+
+.link-login {
+  color: #a64b2a;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.link-login:hover {
+  text-decoration: underline;
+}
+
+h2 {
+  line-height: 1;
 }
 
 @media (max-width: 768px) { 
