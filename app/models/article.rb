@@ -16,6 +16,7 @@ class Article < ApplicationRecord
     slug  
   end
 
+
 end
 
 
