@@ -22,6 +22,16 @@
     
     </p>
 
+    <% @articles.each do |article| %>
+  <h3><%= article.name %></h3>
+  <p><%= article.description %></p>
+  
+  <% if article.avatar.attached? %>
+    <img src="cid:<%= article.name %>_avatar.jpg" alt="<%= article.name %> avatar" />
+  <% end %>
+<% end %>
+
+
     <p> 
 
     Ronronnements et pattes de velours,  
