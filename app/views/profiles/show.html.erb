@@ -20,7 +20,7 @@
 
     <div class="column-name-line">
       <p class="column-name">Date d'achat</p>
-      <p class="column-name">Numéro de commande</p>
+      <p class="column-name">N° de commande</p>
       <p class="column-name">Status</p>
       <p class="column-name price-element">Prix total</p>
     </div>
@@ -38,15 +38,16 @@
 
     <div class="no-order-yet">
     <% else %>
-      <p>Vous n'avez pas encore passé votre première commande.</p>
+      <p class="no-order">Vous n'avez pas encore passé votre première commande.</p>
     <% end %>
     </div>
 
   </div>
 
 </div>
-
+<div class="render_footer">
 <%= render 'layouts/footer' %>
+</div>
 
 
 

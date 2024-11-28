@@ -1,7 +1,7 @@
 <%= render 'layouts/navbar' %>
 <div class="regiE_body">
     <div class="regiE_edit">
-        <h2 id="flo_BG">Edit <%= resource_name.to_s.humanize %></h2>
+        <h2 id="title-edit">Edit <%= resource_name.to_s.humanize %></h2>
 
       <div class="regiE_infos">
         <h3 class="regiE_infos">Mes infos</h3>
@@ -19,8 +19,9 @@
 
       <div class="field">
         <span class="regiE_txt_input"><%= f.label :'Votre email' %></span><br />
-        <div>
-          <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "regiE_input_check" %>
+        <div class="regiE_input_check">
+          <%= image_tag 'user-edit.png', alt: 'Mastercard', class: 'icon-edit' %>
+          <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "input-edit" %>
         </div>
       </div>
 
@@ -30,8 +31,9 @@
 
       <div class="field">
         <%= f.label :password, class: "regiE_txt_input" %> <i>(leave blank if you don't want to change it)</i><br />
-        <div >
-          <%= f.password_field :password, autocomplete: "new-password", class: "regiE_input_check" %>
+         <div class="regiE_input_check">
+          <%= image_tag 'lock-edit.png', alt: 'Mastercard', class: 'icon-edit' %>
+          <%= f.password_field :password, autocomplete: "new-password", class: "input-edit" %>
         </div>
         <% if @minimum_password_length %>
           <br />
@@ -41,15 +43,17 @@
 
       <div class="field">
         <%= f.label :password_confirmation, class: "regiE_txt_input" %><br />
-        <div>
-          <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "regiE_input_check" %>
+          <div class="regiE_input_check">
+          <%= image_tag 'lock-edit.png', alt: 'Mastercard', class: 'icon-edit' %>
+          <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "input-edit" %>
         </div>
       </div>
 
       <div class="field">
         <%= f.label :current_password, class: "regiE_txt_input" %> <i>(we need your current password to confirm your changes)</i><br />
-        <div>
-          <%= f.password_field :current_password, autocomplete: "current-password", class: "regiE_input_check" %>
+          <div class="regiE_input_check">
+          <%= image_tag 'lock-edit.png', alt: 'Mastercard', class: 'icon-edit' %>
+          <%= f.password_field :current_password, autocomplete: "current-password", class: "input-edit" %>
         </div>
       </div>
 

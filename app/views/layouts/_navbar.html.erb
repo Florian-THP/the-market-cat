@@ -1,10 +1,17 @@
 <nav>
-  <%= image_tag 'logo.png', alt: 'Mon Logo', class: 'logonav' %>
+  <%= link_to root_path, class: 'linknav' do %>
+  <%= image_tag 'logo.png', alt: 'Accueil', class: 'logonav' %>
+  <% end %>
   <div class="containerLink">
     <%= link_to 'Accueil', root_path, class: 'linknav' %>
     <div class="linkuser">
      <% if current_user%>
-     <%= image_tag 'profiluser.png', alt: 'profil', class: 'btnnav-icon' %>
+     <%= form_with url: profile_path(current_user.id), method: :get, class: 'logout-form' do %>
+     <%= button_tag type: 'submit', class: 'btn-logout' do %>
+     <%= image_tag 'profiluser.png', alt: 'Déconnexion', class: 'btnnav-icon' %>
+     <% end %>
+     <% end %>
+    
      <%= form_with url: destroy_user_session_path, method: :delete, class: 'logout-form' do %>
      <%= button_tag type: 'submit', class: 'btn-logout' do %>
      <%= image_tag 'disconnect.png', alt: 'Déconnexion', class: 'btnnav-icon' %>

@@ -48,7 +48,8 @@ h3 {
 
 .orders-containers {
   margin-top: -10px;
-  width: 60%;
+  width: auto;
+  max-width: 1000px;
   border: 1px;
   border-radius: 15px;
   border: 1px solid #d9d9d9;
@@ -97,4 +98,8 @@ h3 {
 
 .no-order-yet {
   padding-left: 10px;
+}
+
+.no-order {
+  text-align: center;
 }

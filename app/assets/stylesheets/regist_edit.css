@@ -15,7 +15,7 @@
 
     }
 
-    #flo_BG{
+    #title-edit{
         margin-bottom: 0px; 
         line-height: 1;
     }
@@ -53,7 +53,19 @@
     border-radius: 15px;
     display: flex;
     align-items: center;
-    border: 1px solid rgb(0, 0, 0);
+    border: 1px solid rgb(173, 173, 173);
+    }
+
+    .icon-edit {
+        width: 20px;
+    }
+
+    .input-edit {
+        width: 90%;
+        margin-left: 10px;
+        border: none;
+        height: 35px;
+        border-radius: 15px;
     }
 
    
@@ -70,7 +82,8 @@
         border-radius: 15px;
         display: flex;
         align-items: center;
-        border: 1px solid rgb(0, 0, 0);
+        justify-content: center;
+        border: none;
         margin-top: 10px;
         margin-bottom: 10px;
     }
@@ -87,9 +100,13 @@
         border-radius: 15px;
         display: flex;
         align-items: center;
-        border: 1px solid rgb(0, 0, 0);
-        margin-top: 10px;
+        border: none;
+        justify-content: center;
         margin-bottom: 10px;
+    }
+
+    .regiE_btn_update:active,.regiE_btn_cancel:active {
+        transform: scale(0.97);
     }
     .h3_cancel{
         display: flex;
