@@ -1,0 +1,52 @@
+<%= render 'layouts/navbar' %>
+
+<div class="body-profile">
+
+  <h2>Mon profil</h2>
+  <h3>Mes infos</h3>
+
+
+  <div class="my-info">
+     <div class="email-info-container">
+      <p><%= current_user.email %></p>
+    </div>
+      <%= button_to "Modifier", edit_user_registration_path(current_user), method: :get, class: "btn-primary" %>
+  </div>
+  <br><br><br>
+
+  <h3>Mes commandes</h3>
+
+  <div class="orders-containers">
+
+    <div class="column-name-line">
+      <p class="column-name">Date d'achat</p>
+      <p class="column-name">Numéro de commande</p>
+      <p class="column-name">Status</p>
+      <p class="column-name price-element">Prix total</p>
+    </div>
+
+    <% if @orders.any? %>
+      <% @orders.each do |order| %>
+      <div class="order-info-line">
+        <p class="order-tab"><%= order.created_at.strftime("%d/%m/%Y") %></p>
+        <p class="order-tab"><%= order.stripe_customer_id %></p>
+        <p class="order-tab"><%= order.status %></p>
+        <p class="order-tab"><%= number_to_currency(order.total_price, unit: "€")%></p>
+      </div>
+      <% end %>
+      
+
+    <div class="no-order-yet">
+    <% else %>
+      <p>Vous n'avez pas encore passé votre première commande.</p>
+    <% end %>
+    </div>
+
+  </div>
+
+</div>
+
+<%= render 'layouts/footer' %>
+
+
+

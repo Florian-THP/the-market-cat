@@ -12,13 +12,22 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   root "articles#index"
-  resources :articles
+  resources :articles, path: 'produits'
+
 
   resource :cart, only: [:show] do
-    post 'add_article_to_cart', on: :collection  # Ajout d'un article spécifique au panier
+    post 'add_article_to_cart', on: :collection
     delete 'remove_article_from_cart', on: :collection  # Suppression d'un article spécifique du panier
     delete 'clear_cart', on: :collection 
   end
 
+scope '/checkout' do
+  post 'create', to: 'checkout#create', as: 'checkout_create'
+  get 'success', to: 'checkout#success', as: 'checkout_success'
+  get 'cancel', to: 'checkout#cancel', as: 'checkout_cancel'
+end
+
   get '/contact', to: 'static_pages#contact'
+
+  resources :profiles, only: [:show]
 end

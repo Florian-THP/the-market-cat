@@ -1,43 +1,69 @@
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
+<%= render 'layouts/navbar' %>
+<div class="regiE_body">
+    <div class="regiE_edit">
+        <h2 id="flo_BG">Edit <%= resource_name.to_s.humanize %></h2>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
+      <div class="regiE_infos">
+        <h3 class="regiE_infos">Mes infos</h3>
+      </div>
+    </div>
+    <div class="email-info-container">
+      <p><%= current_user.email %></p>
+    </div>
+      <div class="regiE_infos">
+        <h3 class="regiE_infos">Modifier votre mot de passe</h3>
+      </div>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+      <%= render "devise/shared/error_messages", resource: resource %>
 
-  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
-  <% end %>
+      <div class="field">
+        <span class="regiE_txt_input"><%= f.label :'Votre email' %></span><br />
+        <div>
+          <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "regiE_input_check" %>
+        </div>
+      </div>
 
-  <div class="field">
-    <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
-    <% if @minimum_password_length %>
-      <br />
-      <em><%= @minimum_password_length %> characters minimum</em>
+      <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+        <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+      <% end %>
+
+      <div class="field">
+        <%= f.label :password, class: "regiE_txt_input" %> <i>(leave blank if you don't want to change it)</i><br />
+        <div >
+          <%= f.password_field :password, autocomplete: "new-password", class: "regiE_input_check" %>
+        </div>
+        <% if @minimum_password_length %>
+          <br />
+          <em><%= @minimum_password_length %> characters minimum</em>
+        <% end %>
+      </div>
+
+      <div class="field">
+        <%= f.label :password_confirmation, class: "regiE_txt_input" %><br />
+        <div>
+          <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "regiE_input_check" %>
+        </div>
+      </div>
+
+      <div class="field">
+        <%= f.label :current_password, class: "regiE_txt_input" %> <i>(we need your current password to confirm your changes)</i><br />
+        <div>
+          <%= f.password_field :current_password, autocomplete: "current-password", class: "regiE_input_check" %>
+        </div>
+      </div>
+
+      <div>
+        <%= f.submit "Update", class: "regiE_btn_update" %>
+      </div>
     <% end %>
-  </div>
+    <div class="h3_cancel">
+      <h3>Cancel my account</h3>
+    </div>
 
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-  </div>
+    <div> <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?", turbo_confirm: "Are you sure?" }, method: :delete, class: "regiE_btn_cancel" %></div>
 
-  <div class="field">
-    <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
-    <%= f.password_field :current_password, autocomplete: "current-password" %>
-  </div>
+    
+</div>
 
-  <div class="actions">
-    <%= f.submit "Update" %>
-  </div>
-<% end %>
-
-<h3>Cancel my account</h3>
-
-<div>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?", turbo_confirm: "Are you sure?" }, method: :delete %></div>
-
-<%= link_to "Back", :back %>
+<%= render 'layouts/footer' %>
