@@ -22,7 +22,11 @@
           <div class="article_img">
             <div class="imghover">
             <%= link_to article_path(article), class: "btn_article", data: { turbo_frame: "_top" } do %>
-              <%= image_tag("imageJumbo.png", alt: "Cat", class: "img_article") %>
+                  <%if article.avatar.attached?%>
+                  <%= image_tag article.avatar, alt: 'avatar', class: 'img_article'%>
+                  <%else%>
+                  <p>=== Il n'y a pas encore d'avatar lié à cet utilisateur ===</p>
+                  <%end%>
                <% end %>
                </div>
               <div class="border_article">

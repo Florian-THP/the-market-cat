@@ -1,5 +1,6 @@
 class Article < ApplicationRecord
   before_save :generate_slug  # Génère un slug avant de sauvegarder
+  has_one_attached :avatar
 
   has_many :cart_items                   # Articles ajoutés à des paniers.
   has_many :carts, through: :cart_items  # Les paniers contenant cet article.

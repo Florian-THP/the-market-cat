@@ -25,11 +25,11 @@ class ArticlesController < ApplicationController
     private 
 
     def article_params
-      params.require(:article).permit(:name, :description, :price)
+      params.require(:article).permit(:name, :description, :price, :avatar)
     end
 
     def check_admin
-      unless current_user.admin?
+      unless current_user.is_admin
         redirect_to root_path, alert: "Vous n'êtes pas autorisé à effectuer cette action."
       end
     end

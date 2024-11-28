@@ -14,14 +14,20 @@
   <%= form.text_field :description, class: "form-control" %>
 </div>
 
-<div class=""form-group>
+<div class="form-group">
   <%= form.label :price, "Prix en euros" %>
   <%= form.number_field :price, step: 0.01, class: "form-control" %>
+</div>
+
+<div class="form-group">
+  <%= form.label :avatar, "Uploader l'avatar" %>
+  <%= form.file_field :avatar, class: "form-control" %>
 </div>
 
 <%= form.submit "Créer l'article", class:"btn btn-primary" %>
 
 <% end %>
+
 
 <%=render 'layouts/footer' %>
 

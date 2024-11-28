@@ -14,9 +14,5 @@ class User < ApplicationRecord
 
 
   scope :admins, -> { where(is_admin: true) }
-
-  def admin?
-    is_admin
-  end
   
 end

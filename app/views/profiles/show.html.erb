@@ -45,7 +45,7 @@
   
   <br><br><br>
   <div class="section-admin">
-  <% if @current_user.admin? %>
+  <% if @current_user.is_admin %>
     <h3>Section Admin</h3>
     <%= button_to "Ajouter un article", new_article_path, method: :get, class: "btn-primary" %>
     <br><br><br>
