@@ -53,7 +53,7 @@ puts "10 regular users created!"
 # Create articles (photos of cats)
 puts "Creating articles..."
 30.times do 
-  cat_name = Faker::Creature::Cat.name
+  cat_name = Faker::Creature::Cat.unique.name
   cat_breed = Faker::Creature::Cat.breed
   cat_characteristic = Faker::Creature::Cat.registry
   description = "A magnificent #{cat_breed} cat, known for its #{cat_characteristic.downcase}. #{cat_name} is ready to capture your heart through this unique photo."

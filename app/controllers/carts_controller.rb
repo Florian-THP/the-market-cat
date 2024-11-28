@@ -9,7 +9,7 @@ class CartsController < ApplicationController
   end
 
   def add_article_to_cart
-    article = Article.find(params[:article_id])
+    article = Article.find_by!(slug: params[:article_id])
     quantity = params[:quantity].to_i # Récupère la quantité envoyée
     quantity = 1 if quantity <= 0 # Définit une quantité minimale de 1
   

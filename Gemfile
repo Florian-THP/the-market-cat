@@ -18,6 +18,7 @@ gem "stimulus-rails"
 gem "jbuilder"
 
 gem 'dotenv-rails'
+gem 'mailjet'
 
 # Devise
 gem "devise"

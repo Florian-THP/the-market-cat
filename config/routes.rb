@@ -12,7 +12,8 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   root "articles#index"
-  resources :articles
+  resources :articles, path: 'produits'
+
 
   resource :cart, only: [:show] do
     post 'add_article_to_cart', on: :collection
