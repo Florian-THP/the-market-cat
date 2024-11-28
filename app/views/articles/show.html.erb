@@ -20,11 +20,12 @@
     </div>
    
 
-<%= form_with url: add_article_to_cart_cart_path(article_id: @article.id), method: :post, class: 'article-form' do |f| %>
+<%= form_with url: add_article_to_cart_cart_path(article_id: @article.slug), method: :post, class: 'article-form' do |f| %>
   <div class="input-quantity">
     <input 
   type="number" 
   name="quantity" 
+  value="1"
   placeholder="Quantité"  
   class="quantity-input"
   oninput="this.value = this.value.replace(/[^0-9]/g, '')"
