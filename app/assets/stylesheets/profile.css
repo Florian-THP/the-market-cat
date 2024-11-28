@@ -3,19 +3,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap');
 
 .body-profile {
-width: 100%;
-max-width: 1335px;
-margin-left: auto;
-margin-right: auto;
+    width: 100%;
+    max-width: 1335px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-h2 {
-
-}
-
-h3 {
-
-}
 
 .my-info {
   width: 300px;
@@ -78,17 +71,7 @@ h3 {
   
 }
 
-.order-info-line {
-  width: 95%;
-  display: flex;
-  justify-content: space-between;
-  border: 1px solid #D9D9D9;
-  border-radius: 15px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 5px;
 
-}
 
 .order-tab {
   display: flex;
@@ -102,4 +85,106 @@ h3 {
 
 .no-order {
   text-align: center;
+}
+
+.section-admin {
+  margin-top: 100px;
+}
+
+.btn-primary-add {
+  width: 150px;
+  height: 40px;
+  background-color: #8B4421;
+  border-radius: 15px;
+  border: none;
+  color: #FFFFFF;
+  font-size: 16px;
+  letter-spacing: -5%;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.cont-add-admin {
+  width: 100%;
+  max-width: 1335px;
+  margin-left: auto;
+  margin-right: auto;
+  min-height: 550px;
+  padding-left: 50px;
+}
+
+.form-control {
+  border-radius: 7px;
+  height: 35px;
+  width: 300px;
+  border: 1px solid rgb(170, 170, 170);
+}
+
+.infoadd {
+  font-family: "Space Grotesk", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: -1px;
+}
+
+
+.order-info-line {
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #D9D9D9;
+  border-radius: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+.order-info-line:active {
+  transform: scale(0.97);
+}
+
+
+
+
+
+.list-order-item {
+  display: none; 
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #D9D9D9;
+  border-radius: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5px;
+  background-color: #e4e4e4;
+  margin-bottom: 20px;
+}
+
+.traitsep {
+  height: 1px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgb(175, 175, 175);
+}
+
+.infotext {
+  display: flex;
+  justify-content: space-around;
+}
+
+.infotextname {
+  width: 20%;
+}
+
+.lineitem {
+  display: flex;
+  justify-content: space-around;
+}
+
+.infoitemorder {
+   width: 20%;
 }

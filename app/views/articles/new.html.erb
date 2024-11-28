@@ -1,33 +1,35 @@
 <%=render 'layouts/navbar' %>
-
-<h1>Ajouter un nouvel article:</h1>
+<div class="cont-add-admin">
+<h2>Ajouter un nouvel article:</h2>
 
 <%= form_with model: @article, local: true do |form| %>
 
+
 <div class="form-group">
-  <%= form.label :name, "Nom de l'article" %>
-  <%= form.text_field :name, class: "form-control" %>
+  <%= form.label :name, "Nom de l'article", class: "infoadd" %>
+  </br>
+  <%= form.text_field :name,placeholder: "Chat", class: "form-control" %>
 </div>
 
 <div class="form-group">
-  <%= form.label :description, "Description de l'article" %>
-  <%= form.text_field :description, class: "form-control" %>
+  <%= form.label :description, "Description de l'article", class: "infoadd" %> </br>
+  <%= form.text_field :description, placeholder: "Super photo de chat", class: "form-control" %>
 </div>
 
 <div class="form-group">
-  <%= form.label :price, "Prix en euros" %>
-  <%= form.number_field :price, step: 0.01, class: "form-control" %>
+  <%= form.label :price, "Prix en euros", class: "infoadd" %> </br>
+  <%= form.number_field :price,placeholder: "30", step: 0.01, class: "form-control" %>
 </div>
 
 <div class="form-group">
-  <%= form.label :avatar, "Uploader l'avatar" %>
-  <%= form.file_field :avatar, class: "form-control" %>
+  <%= form.label :avatar, "Uploader l'avatar", class: "infoadd" %> </br>
+  <%= form.file_field :avatar, class: "" %>
 </div>
 
-<%= form.submit "Créer l'article", class:"btn btn-primary" %>
+<%= form.submit "Créer l'article", class:"btn-primary-add" %>
 
 <% end %>
-
+</div>
 
 <%=render 'layouts/footer' %>
 

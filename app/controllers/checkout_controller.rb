@@ -35,19 +35,19 @@ class CheckoutController < ApplicationController
     @session = Stripe::Checkout::Session.retrieve(params[:session_id])
     @payment_intent = Stripe::PaymentIntent.retrieve(@session.payment_intent)
     order_id = @session.metadata.order_id
-
+    order_number = rand(100000..999999)
     order = Order.find(order_id)
     
     # Mettre à jour le statut de la commande
     order.update!(status: 'Successful Payment')
-
+    order.update!(stripe_customer_id: order_number)
     # Transférer les articles du panier à la commande
     cart = current_user.cart
     cart.cart_items.each do |cart_item|
       order.order_items.create!(
         article: cart_item.article,
         quantity: cart_item.quantity,
-        price: cart_item.article.price
+        price: cart_item.article.price,
       )
     end
     
