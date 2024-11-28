@@ -15,7 +15,7 @@ Rails.application.routes.draw do
   resources :articles
 
   resource :cart, only: [:show] do
-    post 'add_article_to_cart', on: :collection  # Ajout d'un article spécifique au panier
+    post 'add_article_to_cart', on: :collection
     delete 'remove_article_from_cart', on: :collection  # Suppression d'un article spécifique du panier
     delete 'clear_cart', on: :collection 
   end
