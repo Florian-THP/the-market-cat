@@ -31,4 +31,3 @@ end
 
   resources :profiles, only: [:show]
 end
-

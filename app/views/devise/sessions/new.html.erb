@@ -1,26 +1,63 @@
-<h2>Log in</h2>
+<div class="login-container">
+ <!-- Section gauche : Image -->
+<div class="left-section-connexion">
+</div>
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  <!-- Section droite : Formulaire -->
+  <div class="right-section">
+
+    <!-- Barre de navigation spécifique à la page de connexion -->
+  <div class="login-navbar">
+  <div class="nav-left">
+    <%= link_to root_path, class: "login-nav-home" do %>
+      <%= image_tag "logo_home.png", alt: "Logo maison", class: "home-logo" %>
+      <i class="fas fa-home"></i> Accueil
+    <% end %>
   </div>
-
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "current-password" %>
+  <div class="nav-right">
+    <%= image_tag "logo_chat.png", alt: "Logo chat", class: "login-nav-logo" %>
   </div>
+</div>
 
-  <% if devise_mapping.rememberable? %>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
+    <!-- Titre de la page -->
+    <h2 class="login-title">Connexion</h2>
+
+    <!-- Formulaire de connexion -->
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <div class="form-group">
+        <%= f.label :email, "Email", class: "form-label" %>
+        <div class="input_form">
+        <%= image_tag "user_form.png", alt: "user", class: "logo-input-form" %>
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "exemple@gmail.com", class: "form-input" %>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :password, "Mot de passe", class: "form-label" %>
+        <div class="input_form">
+        <%= image_tag "locker_form.png", alt: "locker", class: "logo-input-form" %>
+        <%= f.password_field :password, autocomplete: "current-password", placeholder: "********", class: "form-input" %>
+        </div>
+      </div>
+
+      <% if devise_mapping.rememberable? %>
+        <div class="form-group remember-me">
+          <%= f.check_box :remember_me, class: "remember-checkbox" %>
+          <%= f.label :remember_me, "Se souvenir de moi" %>
+          <%= link_to "Mot de passe oublié ?", new_password_path(resource_name), class: "link-forgot-password" %>
+        </div>
+      <% end %>
+      
+      <div class="form-group">
+        <%= f.submit "Se connecter", class: "btn-login" %>
+      </div>
+    <% end %>
+
+    <!-- Lien vers l'inscription -->
+    <div class="signup-link">
+      <p class="no-account-text">
+        Vous n'avez pas de compte ? <%= link_to "S'inscrire", new_registration_path(resource_name), class: "link-signup" %>
+      </p>
     </div>
-  <% end %>
-
-  <div class="actions">
-    <%= f.submit "Log in" %>
   </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+</div>
