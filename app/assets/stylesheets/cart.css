@@ -21,7 +21,6 @@
     align-items: center;
     width: auto;
     padding: 10px;
-    margin-bottom: 30px;
 }
 
 .articlepanier {
@@ -35,6 +34,7 @@
     font-style: normal;
     letter-spacing: -0.8px;
     max-width: 1200px;
+    min-height: 380px;
 }
 
 .article-cart {
@@ -170,4 +170,10 @@
 .articleshowpanier {
     display: flex;
     justify-content: space-between;
+}
+
+.footer_cart {
+  position: initial;
+  bottom: 0;
+  width: 100%;
 }

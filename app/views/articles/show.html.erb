@@ -3,7 +3,11 @@
 <div class="article-show-container">
   <!-- Image du produit -->
   <div class="article-image">
-     <%= image_tag 'chattest.png', alt: 'chat', class: 'img-article' %>
+    <%if @article.avatar.attached?%>
+      <%= image_tag @article.avatar, alt: 'avatar', class: 'img-article'%>
+    <%else%>
+      <p>=== Il n'y a pas encore d'avatar lié à cet utilisateur ===</p>
+    <%end%>
   </div>
 
   <!-- Détails du produit -->
@@ -38,9 +42,19 @@
   <%= f.submit 'Ajouter au panier', class: 'article-btn' %>
 <% end %>
 
+<div class="admin-delete"></div>
+  <% if current_user.is_admin %>
+  <%= button_to "Supprimer cet article", article_path(@article), method: :delete, data: { confirm: "Êtes-vous sûr de vouloir supprimer cet article ?" }, class: "btn-delete-admin" %>
+  <% end %>
+</div>
+
   </div>
 </div>
+
+
+
 
 <div class="render_footer">
   <%=render 'layouts/footer' %>
 </div>
+

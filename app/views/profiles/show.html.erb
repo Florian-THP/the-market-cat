@@ -1,10 +1,12 @@
+<%= javascript_include_tag 'item' %>
+
 <%= render 'layouts/navbar' %>
 
 <div class="body-profile">
 
   <h2>Mon profil</h2>
+  
   <h3>Mes infos</h3>
-
 
   <div class="my-info">
      <div class="email-info-container">
@@ -25,15 +27,36 @@
       <p class="column-name price-element">Prix total</p>
     </div>
 
+   
+   
     <% if @orders.any? %>
-      <% @orders.each do |order| %>
-      <div class="order-info-line">
-        <p class="order-tab"><%= order.created_at.strftime("%d/%m/%Y") %></p>
-        <p class="order-tab"><%= order.stripe_customer_id %></p>
-        <p class="order-tab"><%= order.status %></p>
-        <p class="order-tab"><%= number_to_currency(order.total_price, unit: "€")%></p>
-      </div>
-      <% end %>
+  <% @orders.reverse.each do |order| %>
+  <div class="order-info-line" onclick="toggleOrderItems(this)">
+    <p class="order-tab"><%= order.created_at.strftime("%d/%m/%Y") %></p>
+    <p class="order-tab"><%= order.stripe_customer_id %></p>
+    <p class="order-tab"><%= order.status %></p>
+    <p class="order-tab"><%= number_to_currency(order.total_price, unit: "€") %></p>
+  </div>
+  
+  <div class="list-order-item" style="display: none;">
+  <div class="infotext">
+    <p class="infotextname">Article</p>
+    <p class="infotextname">Quantité</p>
+    <p class="infotextname">Prix</p>
+    </div>
+    <div class="traitsep"></div>
+    <% order.order_items.each do |item| %>
+    <div class="lineitem">
+      <p class="infoitemorder"><%= item.article.name %></p>
+       <p class="infoitemorder"><%= item.quantity %></p>
+        <p class="infoitemorder"><%= number_to_currency(item.price, unit: "€") %></p>
+        </div>
+    <% end %>
+  </div>
+
+ 
+<% end %>
+
       
 
     <div class="no-order-yet">
@@ -41,13 +64,23 @@
       <p class="no-order">Vous n'avez pas encore passé votre première commande.</p>
     <% end %>
     </div>
-
+    </div>
+      <div class="section-admin">
+  <% if @current_user.is_admin %>
+    <h3>Section Admin</h3>
+    <%= button_to "Ajouter un article", new_article_path, method: :get, class: "btn-primary-add" %>
+    <br><br><br>
+    <% end %>
   </div>
+  
+  
+
 
 </div>
-<div class="render_footer">
+
 <%= render 'layouts/footer' %>
-</div>
+
+
 
 
 

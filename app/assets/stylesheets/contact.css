@@ -28,20 +28,20 @@ p {
 }
 
 .container-contact {
-  height: 500px;
   width: 90%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 20px;
+  margin-top: 70px;
   overflow: hidden;
 }
 
 .info-contact {
   width: 30%;
   margin-left: 100px;
+  margin-top: -50px;
 }
 
 .text-info-contact {
@@ -57,10 +57,32 @@ p {
 }
 
 .image-contact {
-  width: 50%;
-  max-width: 100%;
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .map-image {
-  width: 85%;
-  height: 85%;
+  width: 80%;
+}
+
+@media (max-width: 768px) { 
+  .container-contact {
+    flex-direction: column-reverse;
+    min-height: 500px;
+  }
+
+  .image-contact {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+  }
+
+  .info-contact {
+    width: 100%;
+    margin-left: 0px;
+    margin-top: 10px;
+  }
 }
