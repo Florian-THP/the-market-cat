@@ -8,7 +8,7 @@
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
 
-# require 'faker'
+require 'faker'
 
 # Clean the database
 User.destroy_all
@@ -18,26 +18,27 @@ CartItem.destroy_all
 Order.destroy_all
 OrderItem.destroy_all
 
-# puts "Database cleaned!"
+puts "Database cleaned!"
 
-# # Create administrators
-# puts "Creating administrators..."
-# admin_emails = [
-#   "alexemarichal@hotmail.fr",
-#   "p.moulin.95@gmail.com",
-#   "triboutflorian@gmail.com",
-#   "linepro.olivier@gmail.com",
-#   "jamesbarthee@gmail.com"
-# ]
+# Create administrators
+puts "Creating administrators..."
+admin_emails = [
+  "alexemarichal@hotmail.fr",
+  "p.moulin.95@gmail.com",
+  "triboutflorian@gmail.com",
+  "linepro.olivier@gmail.com",
+  "jamesbarthee@gmail.com"
+]
 
-# admin_emails.each do |email|
-#   User.create!(
-#     email: email,
-#     password: "password123",
-#     is_admin: true
-#   )
-# end
-# puts "#{admin_emails.size} administrators created!"
+admin_emails.each do |email|
+  User.create!(
+    email: email,
+    password: "password123",
+    is_admin: true
+  )
+end
+puts "#{admin_emails.size} administrators created!"
+
 
 # # Create regular users
 # puts "Creating regular users..."
