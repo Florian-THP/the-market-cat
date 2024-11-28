@@ -1,5 +1,5 @@
 class ArticlesController < ApplicationController
-  before_action :check_admin, only: [:new, :create]
+  before_action :check_admin, only: [:new, :create, :destroy]
 
     def index
       @articles = Article.page(params[:page]).per(6)
@@ -20,6 +20,13 @@ class ArticlesController < ApplicationController
       else
         render :new, alert: "Une erreur s'est produite."
       end
+    end
+
+    def destroy
+      @article = Article.find_by!(slug: params[:id]) || Article.find(params[:id])
+      @article.cart_items.destroy_all
+      @article.destroy
+      redirect_to articles_path, notice: "Produit supprimé avec succès !"
     end
 
     private 

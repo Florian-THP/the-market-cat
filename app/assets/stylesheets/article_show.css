@@ -157,6 +157,23 @@ input:focus {
     margin-bottom: 10px;
   }
 
+  .btn-delete-admin{
+    background-color: #E0AB3F;
+    color: #ffffff;
+    font-size: 16px;
+    letter-spacing: -5%;
+    cursor: pointer;
+    height: 40px;
+    width: 100%;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
   .article-btn:active {
     transform: scale(0.98);
   }

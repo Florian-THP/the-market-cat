@@ -4,9 +4,16 @@ class CartsController < ApplicationController
   def show
     @cart = current_user.cart || current_user.create_cart
     @cart_items = @cart.cart_items.includes(:article)
-     @order = current_user.orders.last
+
+    # Supprimer les cart_items sans article associé
+    @cart_items.each do |cart_item|
+    cart_item.destroy if cart_item.article.nil?
+  end
+    
+  @order = current_user.orders.last
 
   end
+
 
   def add_article_to_cart
     article = Article.find_by!(slug: params[:article_id])

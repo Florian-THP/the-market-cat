@@ -42,8 +42,17 @@
   <%= f.submit 'Ajouter au panier', class: 'article-btn' %>
 <% end %>
 
+<div class="admin-delete"></div>
+  <% if current_user.is_admin %>
+  <%= button_to "Supprimer cet article", article_path(@article), method: :delete, data: { confirm: "Êtes-vous sûr de vouloir supprimer cet article ?" }, class: "btn-delete-admin" %>
+  <% end %>
+</div>
+
   </div>
 </div>
+
+
+
 
 <div class="render_footer">
   <%=render 'layouts/footer' %>
