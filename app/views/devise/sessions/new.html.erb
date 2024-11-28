@@ -1,12 +1,9 @@
 <div class="login-container">
- <!-- Section gauche : Image -->
 <div class="left-section-connexion">
 </div>
 
-  <!-- Section droite : Formulaire -->
   <div class="right-section">
 
-    <!-- Barre de navigation spécifique à la page de connexion -->
   <div class="login-navbar">
   <div class="nav-left">
     <%= link_to root_path, class: "login-nav-home" do %>
@@ -19,10 +16,8 @@
   </div>
 </div>
 
-    <!-- Titre de la page -->
     <h2 class="login-title">Connexion</h2>
 
-    <!-- Formulaire de connexion -->
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
       <div class="form-group">
         <%= f.label :email, "Email", class: "form-label" %>
@@ -53,7 +48,6 @@
       </div>
     <% end %>
 
-    <!-- Lien vers l'inscription -->
     <div class="signup-link">
       <p class="no-account-text">
         Vous n'avez pas de compte ? <%= link_to "S'inscrire", new_registration_path(resource_name), class: "link-signup" %>
