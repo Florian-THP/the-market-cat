@@ -41,13 +41,19 @@
       <p class="no-order">Vous n'avez pas encore passé votre première commande.</p>
     <% end %>
     </div>
-
   </div>
+</div>
 
-</div>
-<div class="render_footer">
+<!----SECTION ADMIN---->
+<% if current_user.is_admin = true %>
+  <div class="admin-container">
+    <h1>ICI SECTION ADMIN ADD ARTICLES</h1>
+  </div>
+<% end %>
+<!--------------------->
+
 <%= render 'layouts/footer' %>
-</div>
+
 
 
 

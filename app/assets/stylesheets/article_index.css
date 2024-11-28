@@ -6,7 +6,7 @@ body {
 }
 .jumbotron {
     background-color: #FAEED8;
-    border-radius: 15px; 
+    border-radius: 15px;
     padding-bottom: 50px;
     margin-top: 10px;
     width: 97%;
@@ -162,14 +162,25 @@ h3 {
     cursor: pointer;
   }
 
+ 
   .addcarticon {
     width: 30px;
   }
-  
 
   .addcarticon:active {
     transform: scale(0.95);
+    animation: rotateAnimation 0.5s ease;
   }
+  
+  @keyframes rotateAnimation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
 
   .pagination a, .pagination span {
     margin: 0 5px;
